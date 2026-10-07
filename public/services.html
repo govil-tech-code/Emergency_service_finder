@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Services</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="brand">
+
+        <span class="brand-shield">
+            <i class="fa-solid fa-plus"></i>
+        </span>
+
+        <span class="brand-text">
+
+            <strong>EMERGENCY</strong>
+
+            <b>SERVICE FINDER</b>
+
+        </span>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="services.html" class="active">
+            Services
+        </a>
+
+        <a href="hospitals.html">
+            Hospitals
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <a href="tel:112"
+       class="emergency-top">
+
+        <i class="fa-solid fa-bell"></i>
+
+        Emergency Call
+
+    </a>
+
+</header>
+
+
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="services-header">
+
+    <div>
+
+        <h1>
+            Emergency Services
+        </h1>
+
+        <p>
+            Quick access to essential emergency services near you.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<main class="services-page">
+
+
+    <div class="services-title">
+
+        <h2>
+            Find Emergency Services
+        </h2>
+
+        <p>
+            Select a service to find nearby facilities and get help quickly.
+        </p>
+
+    </div>
+
+
+
+    <section class="services-grid">
+
+
+        <!-- AMBULANCE -->
+
+        <div class="service-large-card">
+
+            <div class="large-icon ambulance-bg">
+
+                <i class="fa-solid fa-truck-medical"></i>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Ambulance
+                </h3>
+
+                <p>
+                    Find the nearest ambulance and
+                    get emergency medical transportation
+                    as quickly as possible.
+                </p>
+
+                <button onclick="findService('Ambulance')">
+
+                    Find Ambulance
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HOSPITAL -->
+
+        <div class="service-large-card">
+
+            <div class="large-icon hospital-bg">
+
+                <i class="fa-solid fa-hospital"></i>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Hospitals
+                </h3>
+
+                <p>
+                    Locate nearby hospitals, emergency
+                    departments and medical facilities.
+                </p>
+
+                <button onclick="findService('Hospitals')">
+
+                    Find Hospitals
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- POLICE -->
+
+        <div class="service-large-card">
+
+            <div class="large-icon police-bg">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Police Stations
+                </h3>
+
+                <p>
+                    Find the nearest police station
+                    for security and emergency assistance.
+                </p>
+
+                <button onclick="findService('Police')">
+
+                    Find Police Station
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FIRE -->
+
+        <div class="service-large-card">
+
+            <div class="large-icon fire-bg">
+
+                <i class="fa-solid fa-fire"></i>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Fire Stations
+                </h3>
+
+                <p>
+                    Locate nearby fire stations for
+                    fire emergencies and rescue operations.
+                </p>
+
+                <button onclick="findService('Fire Stations')">
+
+                    Find Fire Station
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BLOOD BANK -->
+
+        <div class="service-large-card">
+
+            <div class="large-icon blood-bg">
+
+                <i class="fa-solid fa-droplet"></i>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Blood Banks
+                </h3>
+
+                <p>
+                    Find nearby blood banks and check
+                    availability during medical emergencies.
+                </p>
+
+                <button onclick="findService('Blood Banks')">
+
+                    Find Blood Bank
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PHARMACY -->
+
+        <div class="service-large-card">
+
+            <div class="large-icon pharmacy-bg">
+
+                <i class="fa-solid fa-pills"></i>
+
+            </div>
+
+            <div class="card-content">
+
+                <h3>
+                    Pharmacies
+                </h3>
+
+                <p>
+                    Find nearby pharmacies and
+                    emergency medicine stores.
+                </p>
+
+                <button onclick="findService('Pharmacies')">
+
+                    Find Pharmacy
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= EMERGENCY SECTION ================= -->
+
+    <section class="services-emergency">
+
+        <div class="emergency-big-icon">
+
+            <i class="fa-solid fa-phone"></i>
+
+        </div>
+
+
+        <div>
+
+            <h2>
+                Facing an Emergency?
+            </h2>
+
+            <p>
+                Don't wait. Contact emergency services immediately.
+            </p>
+
+        </div>
+
+
+        <a href="tel:112">
+
+            <i class="fa-solid fa-phone"></i>
+
+            Call Emergency Services
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Emergency Service Finder.
+    Stay safe.
+
+</footer>
+
+
+
+<script>
+
+function findService(service) {
+
+    alert(
+        "Finding nearest " + service + "..."
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
